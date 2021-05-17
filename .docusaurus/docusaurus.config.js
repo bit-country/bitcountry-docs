@@ -6,8 +6,8 @@ export default {
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
-  "organizationName": "bitcountry",
-  "projectName": "docs",
+  "organizationName": "bit-country",
+  "projectName": "bitcountry-docs",
   "themeConfig": {
     "navbar": {
       "title": "Bit.Country Documentation",
