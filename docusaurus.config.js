@@ -6,8 +6,8 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'bitcountry',
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'bit-country',
+  projectName: 'bitcountry-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Bit.Country Documentation',
