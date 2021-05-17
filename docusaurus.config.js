@@ -1,8 +1,8 @@
 module.exports = {
   title: 'Bit.Country Documentation',
   tagline: 'Learn how to integrate with the Metaverse Network - Bit.Country',
-  url: 'https://bit-country.github.io',
-  baseUrl: '/bitcountry-docs/',
+  url: 'http://docs.bit.country/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
