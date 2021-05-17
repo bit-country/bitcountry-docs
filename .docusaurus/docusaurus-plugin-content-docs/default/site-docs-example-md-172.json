@@ -1,0 +1,12 @@
+{
+  "unversionedId": "example",
+  "id": "example",
+  "isDocsHomePage": false,
+  "title": "example",
+  "description": "You can write content using",
+  "source": "@site/docs/example.md",
+  "slug": "/example",
+  "permalink": "/example",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/example.md",
+  "version": "current"
+}

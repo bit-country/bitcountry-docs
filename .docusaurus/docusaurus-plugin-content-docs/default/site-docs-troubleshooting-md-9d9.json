@@ -1,0 +1,21 @@
+{
+  "unversionedId": "troubleshooting",
+  "id": "troubleshooting",
+  "isDocsHomePage": false,
+  "title": "Troubleshooting",
+  "description": "Accessing Zeitgeist through polkadot.js.org/apps",
+  "source": "@site/docs/troubleshooting.md",
+  "slug": "/troubleshooting",
+  "permalink": "/troubleshooting",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/troubleshooting.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Using the Faucet",
+    "permalink": "/using-the-faucet"
+  },
+  "next": {
+    "title": "Guides",
+    "permalink": "/guides"
+  }
+}

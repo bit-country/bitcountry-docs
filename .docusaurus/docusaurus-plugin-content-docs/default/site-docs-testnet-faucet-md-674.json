@@ -1,0 +1,21 @@
+{
+  "unversionedId": "faucet",
+  "id": "faucet",
+  "isDocsHomePage": false,
+  "title": "Getting $NUUM Faucet",
+  "description": "Faucet page is coming soon! Please check back later.",
+  "source": "@site/docs/testnet-faucet.md",
+  "slug": "/faucet",
+  "permalink": "/faucet",
+  "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/testnet-faucet.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "FAQ",
+    "permalink": "/faq"
+  },
+  "next": {
+    "title": "How to run a node",
+    "permalink": "/node-operator"
+  }
+}

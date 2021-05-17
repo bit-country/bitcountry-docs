@@ -1,0 +1,21 @@
+{
+  "unversionedId": "battery-park",
+  "id": "battery-park",
+  "isDocsHomePage": false,
+  "title": "Battery Park",
+  "description": "can follow this guide to connect to it but some things might not work yet. If",
+  "source": "@site/docs/battery-park.md",
+  "slug": "/battery-park",
+  "permalink": "/battery-park",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/battery-park.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/faq"
+  }
+}

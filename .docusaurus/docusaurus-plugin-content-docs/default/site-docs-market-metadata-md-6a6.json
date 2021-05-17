@@ -1,0 +1,21 @@
+{
+  "unversionedId": "market-metadata",
+  "id": "market-metadata",
+  "isDocsHomePage": false,
+  "title": "Market Metadata",
+  "description": "In order to keep some metadata about the markets we use a separate storage",
+  "source": "@site/docs/market-metadata.md",
+  "slug": "/market-metadata",
+  "permalink": "/market-metadata",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/market-metadata.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Guides",
+    "permalink": "/guides"
+  },
+  "next": {
+    "title": "Zeitgeist SDK",
+    "permalink": "/sdk"
+  }
+}

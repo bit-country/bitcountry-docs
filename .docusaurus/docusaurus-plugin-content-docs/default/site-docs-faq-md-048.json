@@ -1,0 +1,21 @@
+{
+  "unversionedId": "faq",
+  "id": "faq",
+  "isDocsHomePage": false,
+  "title": "FAQ",
+  "description": "The FAQ is coming soon! Please check back later.",
+  "source": "@site/docs/faq.md",
+  "slug": "/faq",
+  "permalink": "/faq",
+  "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/faq.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Roadmap",
+    "permalink": "/roadmap"
+  },
+  "next": {
+    "title": "Getting $NUUM Faucet",
+    "permalink": "/faucet"
+  }
+}

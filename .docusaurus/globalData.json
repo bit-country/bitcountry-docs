@@ -1,0 +1,53 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "getting-started",
+          "docs": [
+            {
+              "id": "architecture",
+              "path": "/architecture",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "faq",
+              "path": "/faq",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "faucet",
+              "path": "/faucet",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "getting-started",
+              "path": "/",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "governance",
+              "path": "/governance",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "node-operator",
+              "path": "/node-operator",
+              "sidebar": "someSidebar"
+            },
+            {
+              "id": "roadmap",
+              "path": "/roadmap",
+              "sidebar": "someSidebar"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

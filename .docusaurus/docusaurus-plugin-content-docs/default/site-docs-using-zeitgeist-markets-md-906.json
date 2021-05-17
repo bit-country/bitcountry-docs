@@ -1,0 +1,21 @@
+{
+  "unversionedId": "using-zeitgeist-markets",
+  "id": "using-zeitgeist-markets",
+  "isDocsHomePage": false,
+  "title": "Using Zeitgeist markets",
+  "description": "In order for prediction markets to be liquid, we need to be able to exchange",
+  "source": "@site/docs/using-zeitgeist-markets.md",
+  "slug": "/using-zeitgeist-markets",
+  "permalink": "/using-zeitgeist-markets",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/using-zeitgeist-markets.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Prediction Markets",
+    "permalink": "/prediction-markets"
+  },
+  "next": {
+    "title": "Governance",
+    "permalink": "/governance"
+  }
+}

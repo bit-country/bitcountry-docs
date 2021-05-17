@@ -1,0 +1,21 @@
+{
+  "unversionedId": "futarchy",
+  "id": "futarchy",
+  "isDocsHomePage": false,
+  "title": "Futarchy and Zeitgeist DAOs",
+  "description": "\"Vote on values, but bet on beliefs\"",
+  "source": "@site/docs/futarchy.md",
+  "slug": "/futarchy",
+  "permalink": "/futarchy",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/futarchy.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Decentralized Court",
+    "permalink": "/court"
+  },
+  "next": {
+    "title": "Applications",
+    "permalink": "/applications"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "unversionedId": "architecture",
+  "id": "architecture",
+  "isDocsHomePage": false,
+  "title": "Architecture",
+  "description": "Architecture are coming soon! Please check later.",
+  "source": "@site/docs/guides.md",
+  "slug": "/architecture",
+  "permalink": "/architecture",
+  "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/guides.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "How to run a node",
+    "permalink": "/node-operator"
+  }
+}

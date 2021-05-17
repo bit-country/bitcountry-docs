@@ -1,0 +1,21 @@
+{
+  "unversionedId": "prediction-markets",
+  "id": "prediction-markets",
+  "isDocsHomePage": false,
+  "title": "Prediction Markets",
+  "description": "Prediction markets are openly traded markets that trade assets which are linked",
+  "source": "@site/docs/prediction-markets.md",
+  "slug": "/prediction-markets",
+  "permalink": "/prediction-markets",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/prediction-markets.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "FAQs",
+    "permalink": "/faq"
+  },
+  "next": {
+    "title": "Using Zeitgeist markets",
+    "permalink": "/using-zeitgeist-markets"
+  }
+}

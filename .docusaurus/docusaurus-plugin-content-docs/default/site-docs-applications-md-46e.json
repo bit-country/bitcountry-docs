@@ -1,0 +1,20 @@
+{
+  "unversionedId": "applications",
+  "id": "applications",
+  "isDocsHomePage": false,
+  "title": "Applications",
+  "source": "@site/docs/applications.md",
+  "slug": "/applications",
+  "permalink": "/applications",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/applications.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Futarchy and Zeitgeist DAOs",
+    "permalink": "/futarchy"
+  },
+  "next": {
+    "title": "Roadmap",
+    "permalink": "/roadmap"
+  }
+}

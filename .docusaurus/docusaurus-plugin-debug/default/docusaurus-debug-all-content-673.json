@@ -1,0 +1,241 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Volumes/Samsung_T5/Projects/BitCountry-Docs/bitcountry-docs/sidebars.js",
+          "docsDirPath": "/Volumes/Samsung_T5/Projects/BitCountry-Docs/bitcountry-docs/docs",
+          "mainDocId": "getting-started",
+          "sidebars": {
+            "someSidebar": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Documentation",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "getting-started"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "governance"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "roadmap"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "faq"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Faucet",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "faucet"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Validators",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "node-operator"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Technology",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "architecture"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/architecture": "someSidebar",
+            "/faq": "someSidebar",
+            "/faucet": "someSidebar",
+            "/": "someSidebar",
+            "/governance": "someSidebar",
+            "/node-operator": "someSidebar",
+            "/roadmap": "someSidebar"
+          },
+          "docs": [
+            {
+              "unversionedId": "architecture",
+              "id": "architecture",
+              "isDocsHomePage": false,
+              "title": "Architecture",
+              "description": "Architecture are coming soon! Please check later.",
+              "source": "@site/docs/guides.md",
+              "slug": "/architecture",
+              "permalink": "/architecture",
+              "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/guides.md",
+              "version": "current",
+              "sidebar": "someSidebar",
+              "previous": {
+                "title": "How to run a node",
+                "permalink": "/node-operator"
+              }
+            },
+            {
+              "unversionedId": "faq",
+              "id": "faq",
+              "isDocsHomePage": false,
+              "title": "FAQ",
+              "description": "The FAQ is coming soon! Please check back later.",
+              "source": "@site/docs/faq.md",
+              "slug": "/faq",
+              "permalink": "/faq",
+              "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/faq.md",
+              "version": "current",
+              "sidebar": "someSidebar",
+              "previous": {
+                "title": "Roadmap",
+                "permalink": "/roadmap"
+              },
+              "next": {
+                "title": "Getting $NUUM Faucet",
+                "permalink": "/faucet"
+              }
+            },
+            {
+              "unversionedId": "faucet",
+              "id": "faucet",
+              "isDocsHomePage": false,
+              "title": "Getting $NUUM Faucet",
+              "description": "Faucet page is coming soon! Please check back later.",
+              "source": "@site/docs/testnet-faucet.md",
+              "slug": "/faucet",
+              "permalink": "/faucet",
+              "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/testnet-faucet.md",
+              "version": "current",
+              "sidebar": "someSidebar",
+              "previous": {
+                "title": "FAQ",
+                "permalink": "/faq"
+              },
+              "next": {
+                "title": "How to run a node",
+                "permalink": "/node-operator"
+              }
+            },
+            {
+              "unversionedId": "getting-started",
+              "id": "getting-started",
+              "isDocsHomePage": false,
+              "title": "Getting Started",
+              "description": "Bit.Country is a decentralized metaverse. The concept is uniquely invented and inspired by the decentralization paradigm. Its vision is to allow anyone (especially new users to the blockchain) to create their communities, economics as Bit Country on the blockchain metaverse network.",
+              "source": "@site/docs/getting-started.md",
+              "slug": "/",
+              "permalink": "/",
+              "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/getting-started.md",
+              "version": "current",
+              "sidebar_label": "Getting Started",
+              "sidebar": "someSidebar",
+              "next": {
+                "title": "Governance",
+                "permalink": "/governance"
+              }
+            },
+            {
+              "unversionedId": "governance",
+              "id": "governance",
+              "isDocsHomePage": false,
+              "title": "Governance",
+              "description": "Governance is coming soon! Please check back later.",
+              "source": "@site/docs/governance.md",
+              "slug": "/governance",
+              "permalink": "/governance",
+              "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/governance.md",
+              "version": "current",
+              "sidebar": "someSidebar",
+              "previous": {
+                "title": "Getting Started",
+                "permalink": "/"
+              },
+              "next": {
+                "title": "Roadmap",
+                "permalink": "/roadmap"
+              }
+            },
+            {
+              "unversionedId": "node-operator",
+              "id": "node-operator",
+              "isDocsHomePage": false,
+              "title": "How to run a node",
+              "description": "Node Operator is coming soon! Please check back later.",
+              "source": "@site/docs/node-operator.md",
+              "slug": "/node-operator",
+              "permalink": "/node-operator",
+              "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/node-operator.md",
+              "version": "current",
+              "sidebar": "someSidebar",
+              "previous": {
+                "title": "Getting $NUUM Faucet",
+                "permalink": "/faucet"
+              },
+              "next": {
+                "title": "Architecture",
+                "permalink": "/architecture"
+              }
+            },
+            {
+              "unversionedId": "roadmap",
+              "id": "roadmap",
+              "isDocsHomePage": false,
+              "title": "Roadmap",
+              "description": "Roadmap page is coming soon! Please check back later.",
+              "source": "@site/docs/roadmap.md",
+              "slug": "/roadmap",
+              "permalink": "/roadmap",
+              "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/roadmap.md",
+              "version": "current",
+              "sidebar": "someSidebar",
+              "previous": {
+                "title": "Governance",
+                "permalink": "/governance"
+              },
+              "next": {
+                "title": "FAQ",
+                "permalink": "/faq"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": null
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": null
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
+}

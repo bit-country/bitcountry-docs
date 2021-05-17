@@ -1,0 +1,17 @@
+{
+  "unversionedId": "sdk",
+  "id": "sdk",
+  "isDocsHomePage": false,
+  "title": "Zeitgeist SDK",
+  "description": "The SDK is coming soon! Please check back later.",
+  "source": "@site/docs/sdk.md",
+  "slug": "/sdk",
+  "permalink": "/sdk",
+  "editUrl": "https://github.com/bitcountry/docs/edit/main/docs/sdk.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Guides",
+    "permalink": "/guides"
+  }
+}

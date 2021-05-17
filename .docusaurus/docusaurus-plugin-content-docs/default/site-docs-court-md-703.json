@@ -1,0 +1,21 @@
+{
+  "unversionedId": "court",
+  "id": "court",
+  "isDocsHomePage": false,
+  "title": "Decentralized Court",
+  "description": "Zeitgeist implements a decentralized court to handle disputes that may arise in",
+  "source": "@site/docs/court.md",
+  "slug": "/court",
+  "permalink": "/court",
+  "editUrl": "https://github.com/zeitgeistpm/docs/edit/main/docs/court.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Governance",
+    "permalink": "/governance"
+  },
+  "next": {
+    "title": "Futarchy and Zeitgeist DAOs",
+    "permalink": "/futarchy"
+  }
+}

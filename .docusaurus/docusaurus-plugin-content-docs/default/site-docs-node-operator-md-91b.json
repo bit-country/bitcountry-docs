@@ -1,0 +1,21 @@
+{
+  "unversionedId": "node-operator",
+  "id": "node-operator",
+  "isDocsHomePage": false,
+  "title": "How to run a node",
+  "description": "Node Operator is coming soon! Please check back later.",
+  "source": "@site/docs/node-operator.md",
+  "slug": "/node-operator",
+  "permalink": "/node-operator",
+  "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/node-operator.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Getting $NUUM Faucet",
+    "permalink": "/faucet"
+  },
+  "next": {
+    "title": "Architecture",
+    "permalink": "/architecture"
+  }
+}

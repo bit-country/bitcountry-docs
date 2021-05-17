@@ -1,0 +1,21 @@
+{
+  "unversionedId": "governance",
+  "id": "governance",
+  "isDocsHomePage": false,
+  "title": "Governance",
+  "description": "Governance is coming soon! Please check back later.",
+  "source": "@site/docs/governance.md",
+  "slug": "/governance",
+  "permalink": "/governance",
+  "editUrl": "https://github.com/bit-country/documentation/edit/main/docs/governance.md",
+  "version": "current",
+  "sidebar": "someSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "Roadmap",
+    "permalink": "/roadmap"
+  }
+}
