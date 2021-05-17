@@ -17,6 +17,4 @@ If you want to just jump in and start using Bit.Country, then check out our grea
 
 [decentralized metaverse]: faq.md
 [blockchain metaverse network]: https://github.com/bit-country/Bit-Country-Blockchain
-[decentralized court]: court.md
-[futarchic organizations]: futarchy.md
 [faqs]: faq.md
