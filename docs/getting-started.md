@@ -16,8 +16,7 @@ Users can create their own bit countries, blocks, sections, and items as digital
 If you are just getting started learning about Bit.Country, start at the [FAQs][]
 page. After that you can dive into the particular topic that interested you.
 
-If you want to just jump in and start using Bit.Country, then check out our great
-[faq][].
+[Here are all the links]: https://linktr.ee/bitcountry
 
 [decentralized metaverse]: faq.md
 [blockchain metaverse network]: https://github.com/bit-country/Bit-Country-Blockchain
