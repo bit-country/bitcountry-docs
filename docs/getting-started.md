@@ -5,9 +5,13 @@ sidebar_label: Getting Started
 slug: /
 ---
 
+Start your own bit country - Metaverse, NFTs & Token Economy
+
+We are building both Blockchain Network as well as the DApp.
+
 Bit.Country is a [decentralized metaverse][]. The concept is uniquely invented and inspired by the decentralization paradigm. Its vision is to allow anyone (especially new users to the blockchain) to create their communities, economics as Bit Country on the [blockchain metaverse network][].
 
-Users can create their own countries, blocks, sections, and items as digital assets with NFTs. The UI offers both a classical web view and a 3D in-browser view of the country. The decentralized marketplace allows users to trade their digital assets with each other.
+Users can create their own bit countries, blocks, sections, and items as digital assets with NFTs. The UI offers both a classical web view and a 3D in-browser view of the bit country. The decentralized marketplace allows users to trade their digital assets with each other.
 
 If you are just getting started learning about Bit.Country, start at the [FAQs][]
 page. After that you can dive into the particular topic that interested you.
