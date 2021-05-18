@@ -86,7 +86,7 @@ module.exports = {
           routeBasePath: '/',
           // Please change this to your repo.
           editUrl:
-            'https://github.com/bit-country/documentation/edit/main/',
+            'https://github.com/bit-country/bitcountry-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
