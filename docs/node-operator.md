@@ -162,11 +162,5 @@ To verify that your node is live and synchronized, head to Telemetry and find yo
 
 If everything looks good, go ahead and click on "Validate" in Explorer UI.
 
-Congratulations! If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Bit.Country Tewai Chain validator!
+**Congratulations!** If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Bit.Country Tewai Chain validator!
 
-****
-
-
-
-
-:::
