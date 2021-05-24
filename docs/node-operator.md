@@ -91,14 +91,14 @@ We publish the latest version to the [Docker Hub](https://hub.docker.com/reposit
 
 #### Downloading the docker image
 ```sh
-docker pull bitcountry/bitcountry-node:0.2
+docker pull bitcountry/bitcountry-node:0.3
 ```
 
 #### Running the docker image
 You can test if the docker image is running by using the following command, but the node id
 and the chain data will be deleted after you shut down the docker container:
 ```sh
-docker run bitcountry/bitcountry-node:0.2 --chain tewai
+docker run bitcountry/bitcountry-node:0.3 --chain tewai
 ```
 
 Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need to choose which folder that you would like to store your chain data. Ensure the folder is exists and you have write permission in the folder.
@@ -106,7 +106,7 @@ Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need 
 Assuming the path you want to use locally is */tewaiDb/bitcountry-node*, 
 the command would be:
 ```sh
-docker run -network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:0.2 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
+docker run -network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:0.3 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
 ```
 
 That's it, your node should be running and syncing with other nodes.
@@ -126,7 +126,7 @@ Once your node from step 1 is fully synced then you can stop the node by Control
 **Running from docker**
 
 ```sh
-docker run bitcountry/bitcountry-node:0.2 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
+docker run bitcountry/bitcountry-node:0.3 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
 ```
 
 ### Bond NUUM
