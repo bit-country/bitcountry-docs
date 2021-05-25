@@ -74,7 +74,7 @@ cargo build --release --features=with-bitcountry-runtime
 Once the build has finished you will have the bitcountry-node binary available in the target/release folder. You can start a node for Tewai Chain from the root of the directory like so:
 
 ```sh
-./target/release/bitcountry-node --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
+./target/release/bitcountry-node --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
 ```
 You should see your node begin to sync blocks.
 
@@ -106,7 +106,7 @@ Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need 
 Assuming the path you want to use locally is */tewaiDb/bitcountry-node*, 
 the command would be:
 ```sh
-docker run -network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:0.3 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
+docker run -network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:0.3 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
 ```
 
 That's it, your node should be running and syncing with other nodes.
@@ -121,12 +121,12 @@ Once your node from step 1 is fully synced then you can stop the node by Control
 **Running from source**
 
 ```sh
-./target/release/bitcountry-node --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
+./target/release/bitcountry-node --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
 ```
 **Running from docker**
 
 ```sh
-docker run bitcountry/bitcountry-node:0.3 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooWED5HGA9fKcS1ifHeZ1KeShk2SnH6euwC1nnMAj1zUF4A
+docker run bitcountry/bitcountry-node:0.3 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
 ```
 
 ### Bond NUUM
