@@ -51,7 +51,7 @@ git clone https://github.com/bit-country/Bit-Country-Blockchain.git
 cd Bit-Country-Blockchain
 
 # select correct commit hash
-git checkout 387b953085dfc21f44cf083d89c0fb3bb7931056
+git checkout bfece87795f3b4bd4be225989af2ed717fbf9f8c
 ```
 
 **Install Rust**
