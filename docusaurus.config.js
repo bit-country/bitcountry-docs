@@ -12,7 +12,7 @@ module.exports = {
     navbar: {
       title: 'Bit.Country Documentation',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Bit.Country Logo',
         src: 'img/logo.png',
       },
       items: [
@@ -34,7 +34,7 @@ module.exports = {
               to: '/',
             },
             {
-              label: 'Bit.Country Validators',
+              label: 'Bit.Country Node Operators',
               to: '/node-operator/',
             },
           ],

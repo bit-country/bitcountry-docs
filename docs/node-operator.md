@@ -24,7 +24,7 @@ Or
 
 AWS Medium EC2 instance with 30 GB Hard drive should be efficient.
 
-## **Running a Node**
+## **Running a Node as Collator Node Operator**
 
 There are two ways that you can run a node and connect to the Bit.Country Tewai Chain testnet. 
 
@@ -74,7 +74,7 @@ cargo build --release --features=with-bitcountry-runtime
 Once the build has finished you will have the bitcountry-node binary available in the target/release folder. You can start a node for Tewai Chain from the root of the directory like so:
 
 ```sh
-./target/release/bitcountry-node --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
+./target/release/bitcountry-node --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --name 'your_node_name' --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 You should see your node begin to sync blocks.
 
@@ -103,15 +103,19 @@ docker run bitcountry/bitcountry-node:5f860f4 --chain tewai
 
 Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need to choose which folder that you would like to store your chain data. Ensure the folder is exists and you have write permission in the folder.
 
-Assuming the path you want to use locally is */tewaiDb/bitcountry-node*, 
+Assuming the example path you want to use locally is *path/to/tewaiDb/bitcountry-node*, 
 the command would be:
 ```sh
-docker run -network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
+docker run --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 
-That's it, your node should be running and syncing with other nodes.
+That's it, your node should be running and syncing with other nodes. Please note, if you want to participate in our Collator Node Operator application, please make sure your node id is permanent and has a high up-time. To continue to receive the reward if you loss your data (by any chance) then you can restore the secret_ed25519 inside your database folder that you set up above e.g *path/to/tewaiDb/bitcountry-node/network/secret_ed25519* 
 
-## **Become a Validator and earn a reward**
+Make sure you back up the secret_ed25519 in the safe place.
+
+You can apply to becoming a Collator via [Bit.Country Collator Node Operator Program](https://bit.country)
+
+## **Become a Validator - authority of producing block**
 
 *$NUUM on Tewai Chain Testnet is for testing purpose, they have no value or reflection of NUUM on public mainnet*
 
@@ -121,12 +125,12 @@ Once your node from step 1 is fully synced then you can stop the node by Control
 **Running from source**
 
 ```sh
-./target/release/bitcountry-node --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
+./target/release/bitcountry-node --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 **Running from docker**
 
 ```sh
-docker run bitcountry/bitcountry-node:0.3 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU
+docker run bitcountry/bitcountry-node:5f860f4 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 
 ### Bond NUUM
