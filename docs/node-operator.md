@@ -156,6 +156,11 @@ You need to tell the chain your Session keys by signing and submitting an extrin
 
 Go to Staking > Account Actions, and click "Set Session Key" on the bonding account you generated earlier. Enter the output from author_rotateKeys in the field and click "Set Session Key".
 
+Or you can run on your node to get session key:
+```sh
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933 
+```
+
 Submit this extrinsic and you are now ready to start validating.
 
 ### Validate
