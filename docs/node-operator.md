@@ -113,7 +113,7 @@ That's it, your node should be running and syncing with other nodes. Please note
 
 Make sure you back up the secret_ed25519 in the safe place.
 
-You can apply to becoming a Collator via [Bit.Country Collator Node Operator Program](https://bit.country)
+You can apply to becoming a Collator via [Bit.Country Collator Node Operator Program](https://forms.zohopublic.com/industryconnect/form/BCCollatorNodeApplication/formperma/ua5J1ddpxRlIoLmc-dEZgqKa2rAL7zRMUy7sBHiEyds)
 
 ## **Become a Validator - authority of producing block**
 
