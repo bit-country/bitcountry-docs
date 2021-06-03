@@ -5,24 +5,24 @@ title: How to run a node
 
 Tewai Chain is a Bit.Country Metaverse Public Testnet. Tewai means "The Water in Maori", and we aim to create a Tewai Protocol to become the most important substances on metaverse and flows like water that adjust to any objects.
 
-If you would like to support and be a part of the most important aspects of the future Metaverse, you can apply to become a Node Operator to run the Tewai Protocol using this section [Run a node](node-operator/#run-a-node). Or if you simply wanted to accessing Bit.Country metaverse, click [Access Bit.Country](https://bit.country).
+If you would like to support and be a part of the most important aspects of the future Metaverse, you can apply to become a Node Operator to run the Tewai Protocol using this section [Run a node](node-operator/#run-a-node). Or if you simply wanted to access the Bit.Country metaverse, click [Access Bit.Country](https://bit.country).
 
 ## Run a node
 
 ### Initial Set-up
 
 #### **Requirements**
-The most common way for a beginner to run a validator is on a cloud server running Linux. You can choose whatever VPS provider e.g AWS, Azure, or running on your own local setup.
+The most common way for a beginner to run a validator is on a cloud server running Linux. You can choose whichever VPS provider (e.g AWS, Azure), or try running on your own local setup.
 
 Standard Hardware Specs
 
 * CPU - 2.2 GHz 6-Core Intel Core i7
-* Storage - SSD - Should be reasonably sized to deal with blockchain growth. Starting around 10 GB - 80 GB will be okay for the first six months. Recommend to re-evaluate every six month
+* Storage - SSD - Should be reasonably sized to deal with blockchain growth. Starting around 10 GB - 80 GB will be okay for the first six months. Re-evaluating every six month
 * RAM - 8 Gb
 
 Or 
 
-AWS Medium EC2 instance with 30 GB Hard drive should be efficient.
+AWS Medium EC2 instance with 30 GB Hard drive should be sufficient.
 
 ## **Running a Node as Collator Node Operator**
 
@@ -63,7 +63,7 @@ curl https://sh.rustup.rs -sSf | sh
 ```bash
 ./scripts/init.sh
 ```
-*if init.sh file is not found, make sure you are currently inside Bit-Country-Blockchain directory*
+*if init.sh file is not found, make sure you are currently inside the Bit-Country-Blockchain directory*
 
 After initializing you can then start building by using the cargo command:
 
@@ -101,7 +101,7 @@ and the chain data will be deleted after you shut down the docker container:
 docker run bitcountry/bitcountry-node:5f860f4 --chain tewai
 ```
 
-Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need to choose which folder that you would like to store your chain data. Ensure the folder is exists and you have write permission in the folder.
+Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need to choose which folder you would like to store your chain data. Ensure the folder exists and you have write permission for the folder.
 
 Assuming the example path you want to use locally is *path/to/tewaiDb/bitcountry-node*, 
 the command would be:
@@ -109,7 +109,7 @@ the command would be:
 docker run --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 
-That's it, your node should be running and syncing with other nodes. Please note, if you want to participate in our Collator Node Operator application, please make sure your node id is permanent and has a high up-time. To continue to receive the reward if you loss your data (by any chance) then you can restore the secret_ed25519 inside your database folder that you set up above e.g *path/to/tewaiDb/bitcountry-node/network/secret_ed25519* 
+That's it, your node should be running and syncing with other nodes. Please note, if you want to participate in our Collator Node Operator application, please make sure your node id is permanent and has a high up-time. To continue to receive the reward - if you lose your data (by any chance) - then you can restore the secret_ed25519 inside your database folder that you set up above (e.g *path/to/tewaiDb/bitcountry-node/network/secret_ed25519*). 
 
 Make sure you back up the secret_ed25519 in the safe place.
 
@@ -117,11 +117,11 @@ You can apply to becoming a Collator via [Bit.Country Collator Node Operator Pro
 
 ## **Become a Validator - authority of producing block**
 
-*$NUUM on Tewai Chain Testnet is for testing purpose, they have no value or reflection of NUUM on public mainnet*
+*$NUUM on Tewai Chain Testnet is for testing purpose, it has no value or reflection of $NUUM on the public mainnet*
 
 ### Run the node as validator
 
-Once your node from step 1 is fully synced then you can stop the node by Control + C, and run the node again with --validator and --name arguments.
+Once your node from step 1 is fully synced then you can stop the node by pressing Control + C, and run the node again with --validator and --name arguments.
 **Running from source**
 
 ```sh
@@ -137,7 +137,7 @@ docker run bitcountry/bitcountry-node:5f860f4 --chain tewai --validator --name '
 
 Go to [Tewai Chain Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftewai-node.bit.country#/explorer/node)
 
-Bond the **$NUUM** of the Stash account. These **$NUUM** will be put at stake for the security of the network and can be slashed.
+Bond the **$NUUM** of the Stash account. These **$NUUM** will be put at stake for the security of the network and could be slashed.
 Select the Controller. This is the account that will decide when to start or stop validating.
 
 First, go to the [Staking](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftewai-node.bit.country#/staking) section. Click on "Account Actions", and then the "+ Stash" button.
@@ -146,7 +146,7 @@ First, go to the [Staking](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftewai-n
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator node with your Controller account on Tewai Chain.
 
-Your generate session keys on [Tewai Explorer](https://explorer.bit.country/apps/?rpc=wss%3A%2F%2Ftewai-node.bit.country#/rpc)
+You can generate session keys on [Tewai Explorer](https://explorer.bit.country/apps/?rpc=wss%3A%2F%2Ftewai-node.bit.country#/rpc)
 
 **You need to change the node connection to YOUR validator node in order to use rpc author call**
 
