@@ -135,18 +135,18 @@ docker run bitcountry/bitcountry-node:5f860f4 --chain tewai --validator --name '
 
 ### Bond NUUM
 
-Go to [Tewai Chain Explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftewai-node.bit.country#/explorer/node)
+Go to [Tewai Chain Explorer](https://explorer.bit.country/#/rpc)
 
 Bond the **$NUUM** of the Stash account. These **$NUUM** will be put at stake for the security of the network and could be slashed.
 Select the Controller. This is the account that will decide when to start or stop validating.
 
-First, go to the [Staking](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftewai-node.bit.country#/staking) section. Click on "Account Actions", and then the "+ Stash" button.
+First, go to the [Staking](https://explorer.bit.country/#/staking) section. Click on "Account Actions", and then the "+ Stash" button.
 
 ### Generate Session Keys
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator node with your Controller account on Tewai Chain.
 
-You can generate session keys on [Tewai Explorer](https://explorer.bit.country/apps/?rpc=wss%3A%2F%2Ftewai-node.bit.country#/rpc)
+You can generate session keys on [Tewai Explorer](https://explorer.bit.country/#/rpc)
 
 **You need to change the node connection to YOUR validator node in order to use rpc author call**
 
