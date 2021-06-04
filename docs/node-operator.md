@@ -133,6 +133,37 @@ Once your node from step 1 is fully synced then you can stop the node by pressin
 docker run bitcountry/bitcountry-node:5f860f4 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 
+**Running as a service**
+```
+[Unit]
+Description=Bit.Country Node
+After=network.target
+[Service]
+User=root
+WorkingDirectory=/home/bitcountry/
+ExecStart=$HOME/Bit-Country-Blockchain/target/release/bitcountry-node --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+Restart=always
+RestartSec=3
+[Install]
+WantedBy=multi-user.target
+```
+
+**Running as a service (docker)**
+```
+[Unit]
+Description=Bit.Country Node
+After=docker.service
+Requires=docker.service
+[Service]
+User=root
+WorkingDirectory=/home/bitcountry/
+ExecStart=/usr/bin/docker run --network=host -v /home/bitcountry/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+Restart=always
+RestartSec=3
+[Install]
+WantedBy=multi-user.target
+```
+
 ### Bond NUUM
 
 Go to [Tewai Chain Explorer](https://explorer.bit.country/#/rpc)
