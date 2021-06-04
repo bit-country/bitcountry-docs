@@ -76,6 +76,13 @@ Once the build has finished you will have the bitcountry-node binary available i
 ```sh
 ./target/release/bitcountry-node --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --name 'your_node_name' --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
+
+:::caution For validators
+
+If you plan to run the validator node afterwards, you should add the `--pruning archive` key to the above command at the end
+
+:::
+
 You should see your node begin to sync blocks.
 
 Feel free to play around with the other available options, which you can inspect by executing:
@@ -109,6 +116,12 @@ the command would be:
 docker run --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 
+:::caution For validators
+
+If you plan to run the validator node afterwards, you should add the `--pruning archive` key to the above command at the end
+
+:::
+
 That's it, your node should be running and syncing with other nodes. Please note, if you want to participate in our Collator Node Operator application, please make sure your node id is permanent and has a high up-time. To continue to receive the reward - if you lose your data (by any chance) - then you can restore the secret_ed25519 inside your database folder that you set up above (e.g *path/to/tewaiDb/bitcountry-node/network/secret_ed25519*). 
 
 Make sure you back up the secret_ed25519 in the safe place.
@@ -130,8 +143,14 @@ Once your node from step 1 is fully synced then you can stop the node by pressin
 **Running from docker**
 
 ```sh
-docker run bitcountry/bitcountry-node:5f860f4 --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
+docker run --restart=unless-stopped --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
+:::info
+
+To run the validator node on a pre-synchronized database, you need to make sure that the synchronization command was run with the `--pruning archive` command line key
+
+:::
+
 
 **Running as a service**
 ```
@@ -157,7 +176,7 @@ Requires=docker.service
 [Service]
 User=root
 WorkingDirectory=/home/bitcountry/
-ExecStart=/usr/bin/docker run --network=host -v /home/bitcountry/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+ExecStart=/usr/bin/docker run --rm --network=host -v /home/bitcountry/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 Restart=always
 RestartSec=3
 [Install]
