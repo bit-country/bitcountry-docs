@@ -6,8 +6,8 @@ module.exports = {
       'roadmap',
       'faq'
     ],
-    Faucet: [
-      'faucet'
+    "Faucet": [
+      'testnet-faucet'
     ],
     Validators: [
       'node-operator'
