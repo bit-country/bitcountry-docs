@@ -3,9 +3,11 @@ id: node-operator
 title: How to run a node
 ---
 
-Tewai Chain is a Bit.Country Metaverse Public Testnet. Tewai means "The Water in Maori", and we aim to create a Tewai Protocol to become the most important substances on metaverse and flows like water that adjust to any objects.
+Tewai Chain is a Bit.Country Metaverse Public Testnet. Tewai means "The Water" in Maori, and we aim to make Tewai Protocol become the most important substance for the metaverse and flows like water adjusting to any objects.
 
-If you would like to support and be a part of the most important aspects of the future Metaverse, you can apply to become a Node Operator to run the Tewai Protocol using this section [Run a node](node-operator/#run-a-node). Or if you simply wanted to accessing Bit.Country metaverse, click [Access Bit.Country](https://bit.country).
+If you would like to support and be a part of the most important aspects of the future Metaverse, you can apply to become a Collator Node Operator to run the Tewai Protocol through our testnet and up to mainnet launch as a Parachain Collator.
+
+Head into this section [Run a node](node-operator/#run-a-node). Or if you simply wanted to accessing Bit.Country metaverse, click [Access Bit.Country](https://bit.country).
 
 ## Run a node
 
