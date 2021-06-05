@@ -71,6 +71,11 @@ After initializing you can then start building by using the cargo command:
 cargo build --release --features=with-bitcountry-runtime
 ```
 
+In case your build fails, please use this command first:
+```sh
+sudo apt install cmake git clang libclang-dev build-essential
+```
+
 Once the build has finished you will have the bitcountry-node binary available in the target/release folder. You can start a node for Tewai Chain from the root of the directory like so:
 
 ```sh
