@@ -205,18 +205,22 @@ You need to tell the chain your Session keys by signing and submitting an extrin
 
 You can generate session keys on [Tewai Explorer](https://explorer.bit.country/#/rpc)
 
-**You need to change the node connection to YOUR validator node in order to use rpc author call**
+:::caution 
+
+You need to change the node connection to YOUR validator node in order to use rpc author call**
+
+:::
+
+Or you can perform an RPC query on the local host (on your node) to get the session key:
+```sh
+$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933 
+```
 
 ### Submitting the setKeys Transaction
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator with your Controller account.
 
 Go to Staking > Account Actions, and click "Set Session Key" on the bonding account you generated earlier. Enter the output from author_rotateKeys in the field and click "Set Session Key".
-
-Or you can run on your node to get session key:
-```sh
-$ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933 
-```
 
 Submit this extrinsic and you are now ready to start validating.
 
