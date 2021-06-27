@@ -63,7 +63,11 @@ curl https://sh.rustup.rs -sSf | sh
 
 **Initialize your Wasm Build environment**
 ```bash
-./scripts/init.sh
+rustup update nightly-2021-03-01
+rustup update stable
+
+rustup target add wasm32-unknown-unknown --toolchain nightly-2021-03-01
+rustup default nightly-2021-03-01
 ```
 *if init.sh file is not found, make sure you are currently inside the Bit-Country-Blockchain directory*
 
