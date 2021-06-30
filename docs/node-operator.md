@@ -9,6 +9,10 @@ If you would like to support and be a part of the most important aspects of the 
 
 Head into this section [Run a node](node-operator/#run-a-node). Or if you simply wanted to accessing Bit.Country metaverse, click [Access Bit.Country](https://bit.country).
 
+We give some special NFTs for Node Operators who participate in our Testnet. Check out detail below:
+
+https://twitter.com/BitDotCountry/status/1408282993697853441?s=20
+
 ## Run a node
 
 ### Initial Set-up
