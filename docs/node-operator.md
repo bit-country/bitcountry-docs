@@ -23,12 +23,12 @@ The most common way for a beginner to run a validator is on a cloud server runni
 Standard Hardware Specs
 
 * CPU - 2.2 GHz 6-Core Intel Core i7
-* Storage - SSD - Should be reasonably sized to deal with blockchain growth. Starting around 10 GB - 80 GB will be okay for the first six months. Re-evaluating every six month
+* Storage - SSD - Should be reasonably sized to deal with blockchain growth. Starting around 80 GB - 200 GB will be okay for the first six months. Re-evaluating every six month
 * RAM - 8 Gb
 
 Or 
 
-AWS Medium EC2 instance with 30 GB Hard drive should be sufficient.
+AWS Medium EC2 instance with 100 GB Hard drive should be sufficient.
 
 ## **Running a Node as Collator Node Operator**
 
@@ -45,19 +45,25 @@ Linux-based machine
 
 **Clone Bit.Country Blockchain code**
 
-Go to [Bit.Country repo](https://github.com/bit-country/Bit-Country-Blockchain), clone the repo from correct commit hash.
+Go to [Bit.Country repo](https://github.com/bit-country/Metaverse-Network), clone the repo from correct commit hash.
 
 ``` git
 # clone the code locally
 
-git clone https://github.com/bit-country/Bit-Country-Blockchain.git
+git clone https://github.com/bit-country/Metaverse-Network.git
 
 # change directory
 
-cd Bit-Country-Blockchain
+cd Metaverse-Network
 
-# select correct commit hash
-git checkout bfece87795f3b4bd4be225989af2ed717fbf9f8c
+# select correct `tewai-v0.0.1` branch
+
+git checkout tewai-v0.0.1
+```
+
+**Install Make
+```bash
+sudo apt-get install build-essential
 ```
 
 **Install Rust**
@@ -65,20 +71,15 @@ git checkout bfece87795f3b4bd4be225989af2ed717fbf9f8c
 curl https://sh.rustup.rs -sSf | sh
 ```
 
-**Initialize your Wasm Build environment**
+**Build environment**
 ```bash
-rustup update nightly-2021-03-01
-rustup update stable
-
-rustup target add wasm32-unknown-unknown --toolchain nightly-2021-03-01
-rustup default nightly-2021-03-01
-```
-*if init.sh file is not found, make sure you are currently inside the Bit-Country-Blockchain directory*
+make init
+``1
 
 After initializing you can then start building by using the cargo command:
 
 ```sh
-cargo build --release --features=with-bitcountry-runtime
+cargo build --release --features=with-tewai-runtime
 ```
 
 In case your build fails, please use this command first:
@@ -86,10 +87,10 @@ In case your build fails, please use this command first:
 sudo apt install cmake git clang libclang-dev build-essential
 ```
 
-Once the build has finished you will have the bitcountry-node binary available in the target/release folder. You can start a node for Tewai Chain from the root of the directory like so:
+Once the build has finished you will have the metaverse-node binary available in the target/release folder. You can start a node for Tewai Chain from the root of the directory like so:
 
 ```sh
-./target/release/bitcountry-node --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --name 'your_node_name' --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
+./target/release/metaverse-node --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --name 'your_node_name' --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 
 :::caution For validators
@@ -113,14 +114,14 @@ We publish the latest version to the [Docker Hub](https://hub.docker.com/reposit
 
 #### Downloading the docker image
 ```sh
-docker pull bitcountry/bitcountry-node:5f860f4
+docker pull bitcountry/tewai-node:9832124
 ```
 
 #### Running the docker image
 You can test if the docker image is running by using the following command, but the node id
 and the chain data will be deleted after you shut down the docker container:
 ```sh
-docker run bitcountry/bitcountry-node:5f860f4 --chain tewai
+docker run bitcountry/tewai-node:9832124 --chain tewai
 ```
 
 Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need to choose which folder you would like to store your chain data. Ensure the folder exists and you have write permission for the folder.
@@ -128,7 +129,7 @@ Now, it's time to set up your node to connect to Tewai Chain Bootnode, you need 
 Assuming the example path you want to use locally is *path/to/tewaiDb/bitcountry-node*, 
 the command would be:
 ```sh
-docker run --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
+docker run --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/tewai-node:9832124 -d /bitcountry-db --chain tewai --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 
 :::caution For validators
@@ -153,12 +154,12 @@ Once your node from step 1 is fully synced then you can stop the node by pressin
 **Running from source**
 
 ```sh
-./target/release/bitcountry-node --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
+./target/release/metaverse-node --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 **Running from docker**
 
 ```sh
-docker run --restart=unless-stopped --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
+docker run --restart=unless-stopped --network=host -v /tewaiDb/bitcountry-node:/bitcountry-db bitcountry/tewai-node:9832124 -d /bitcountry-db --chain tewai --validator --name 'your node name' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0' 
 ```
 :::info
 
@@ -175,7 +176,7 @@ After=network.target
 [Service]
 User=root
 WorkingDirectory=/home/bitcountry/
-ExecStart=$HOME/Bit-Country-Blockchain/target/release/bitcountry-node --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+ExecStart=$HOME/Metaverse-Network/target/release/metaverse-node --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 Restart=always
 RestartSec=3
 [Install]
@@ -191,7 +192,7 @@ Requires=docker.service
 [Service]
 User=root
 WorkingDirectory=/home/bitcountry/
-ExecStart=/usr/bin/docker run --rm --network=host -v /home/bitcountry/bitcountry-node:/bitcountry-db bitcountry/bitcountry-node:5f860f4 -d /bitcountry-db --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
+ExecStart=/usr/bin/docker run --rm --network=host -v /home/bitcountry/metaverse-node:/bitcountry-db bitcountry/tewai-node:9832124 -d /bitcountry-db --chain tewai --validator --name 'PutYourNodeName' --bootnodes /ip4/13.239.118.231/tcp/30344/p2p/12D3KooW9rDqyS5S5F6oGHYsmFjSdZdX6HAbTD88rPfxYfoXJdNU --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
 Restart=always
 RestartSec=3
 [Install]
@@ -200,18 +201,18 @@ WantedBy=multi-user.target
 
 ### Bond NUUM
 
-Go to [Tewai Chain Explorer](https://explorer.bit.country/#/rpc)
+Go to [Metaverse Network Blockchain Explorer](https://explorer.metaverse.network/#/rpc)
 
 Bond the **$NUUM** of the Stash account. These **$NUUM** will be put at stake for the security of the network and could be slashed.
 Select the Controller. This is the account that will decide when to start or stop validating.
 
-First, go to the [Staking](https://explorer.bit.country/#/staking) section. Click on "Account Actions", and then the "+ Stash" button.
+First, go to the [Staking](https://explorer.metaverse.network/#/staking) section. Click on "Account Actions", and then the "+ Stash" button.
 
 ### Generate Session Keys
 
 You need to tell the chain your Session keys by signing and submitting an extrinsic. This is what associates your validator node with your Controller account on Tewai Chain.
 
-You can generate session keys on [Tewai Explorer](https://explorer.bit.country/#/rpc)
+You can generate session keys on [Metaverse Network Blockchain Explorer](https://explorer.metaverse.network/#/rpc)
 
 :::caution 
 
