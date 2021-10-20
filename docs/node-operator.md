@@ -78,7 +78,7 @@ cd Metaverse-Network
 git checkout tewai-v0.0.1
 ```
 
-\*\*Install Make
+**Install Make**
 
 ```bash
 sudo apt-get install build-essential
@@ -92,9 +92,9 @@ curl https://sh.rustup.rs -sSf | sh
 
 **Build environment**
 
-````bash
+```bash
 make init
-``1
+```
 
 After initializing you can then start building by using the cargo command:
 
